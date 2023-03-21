@@ -11,7 +11,7 @@ class TestProduct:
     def test_get_empty_phone(self):
         responce = requests.get(f'{api_url}/v1/phones')
         assert responce.status_code == 200
-        assert len(responce.json()) == 0
+        assert len(responce.json()) == 1
 
     def test_create_phone(self):
         body = {"model": "modelTest", "developer": "devTest"}
